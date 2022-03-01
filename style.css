@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Shizuru&display=swap');
+:root {
+  --grid-size: 16;
+  --grid-size-pixels: 600px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: cornflowerblue;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: bisque;
+  font-family: 'Shizuru', cursive;
+  padding: 15px 0px;
+}
+
+main {
+  
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 18px;
+  font-family: 'Hind', sans-serif;
+  background-color: gold;
+}
+
+#container {
+  max-width: var(--grid-size-pixels);
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), calc(var(--grid-size-pixels)/var(--grid-size)) [col-start]);
+}
+
+.grid-div {
+  background-color: white;
+  height: calc(var(--grid-size-pixels)/var(--grid-size));
+  width: calc(var(--grid-size-pixels)/var(--grid-size));
+  border: 1px solid black;
+  display: inline-block;
+  transition: all 1s;
+}
+
+.hovered {
+  background-color: grey;
+  transition: all 0s;
+}
